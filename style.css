@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 1920px;
+  height: 1080px;
+}
+
+.modal-1,
+.modal-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: #fff;
+  display: flex;
+  width: 1270px;
+  height: 581px;
+}
+
+.img-1,
+.img-2 {
+  width: 661px;
+  height: 100%;
+}
+
+.img-1 {
+  background: url(assets/img-1.png) no-repeat;
+}
+.img-2 {
+  background: url(assets/img-2.png) no-repeat;
+}
+
+.form-1,
+.form-2 {
+  margin: auto 60px;
+  border: 1px solid #000; /* временный border */
+  width: 489px;
+}
+
+.form-1 {
+  height: 431px;
+}
+.form-2 {
+  height: 205px;
+}
+
+/* временная кнопка */
+#toggleButton {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 5%;
+  width: 200px;
+  height: 100px;
+}
+
+.hidden {
+  display: none;
+}
