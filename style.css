@@ -8,8 +8,8 @@
 
 .wrapper {
   position: relative;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .open {
@@ -130,6 +130,7 @@ input[type="tel"]:focus {
 #closeButton,
 #closeButton2 {
   position: absolute;
+  z-index: 10;
   top: 0;
   right: 0;
   width: 50px;
@@ -140,13 +141,17 @@ input[type="tel"]:focus {
   display: none;
 }
 
-.close-button:hover .close-default {
+#closeButton:hover .close-default,
+#closeButton2:hover .close-default {
   display: none;
 }
 
-.close-button:hover .close-hover {
+#closeButton:hover .close-hover,
+#closeButton2:hover .close-hover {
   display: block;
+  cursor: pointer;
 }
+
 
 /* общие стили для кнопок */
 .btn {
@@ -177,7 +182,6 @@ input[type="tel"]:focus {
   height: 60px;
 }
 
-/* временная кнопка */
 #openModal {
   position: absolute;
   top: 50%;
