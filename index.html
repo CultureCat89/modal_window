@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
@@ -10,15 +11,41 @@
   <div class="wrapper">
     <div class="modal-1">
       <div class="img-1"></div>
-      <div class="form-1"></div>
-    </div>
-    <div class="modal-2 hidden">
-      <div class="img-2"></div>
-      <div class="form-2"></div>
+      <div class="form-and-close">
+        <div class="form-1">
+          <p class="title">Будем рады ответить на ваши вопросы и помочь с выбором</p>
+        </div>
+        <div class="close-button">
+          <svg class="close-default" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <path d="M13.4591 38L12 36.5409L23.5409 25L12 13.4591L13.4591 12L25 23.5409L36.5409 12L38 13.4591L26.4591 25L38 36.5409L36.5409 38L25 26.4591L13.4591 38Z" fill="#474747"/>
+          </svg>
+          <svg class="close-hover"xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <path d="M13.4591 38L12 36.5409L23.5409 25L12 13.4591L13.4591 12L25 23.5409L36.5409 12L38 13.4591L26.4591 25L38 36.5409L36.5409 38L25 26.4591L13.4591 38Z" fill="#E9DDCA"/>
+          </svg>
+        </div>
+      </div>
     </div>
 
-    <button id="toggleButton">сменить modal</button> <!--временная кнопка-->
-  </div>
+    <div class="modal-2 hidden">
+      <div class="img-2"></div>
+      <div class="form-and-close">
+        <div class="form-2">
+          <p class="title">Ваша заявка принята!</p>
+          <p class="description">Мы свяжемся с вами в течение 5 минут.</p>
+          <button class="btn return-btn">Вернуться на сайт</button>
+        </div>
+        <div class="close-button">
+          <svg class="close-default" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <path d="M13.4591 38L12 36.5409L23.5409 25L12 13.4591L13.4591 12L25 23.5409L36.5409 12L38 13.4591L26.4591 25L38 36.5409L36.5409 38L25 26.4591L13.4591 38Z" fill="#474747"/>
+          </svg>
+          <svg class="close-hover"xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <path d="M13.4591 38L12 36.5409L23.5409 25L12 13.4591L13.4591 12L25 23.5409L36.5409 12L38 13.4591L26.4591 25L38 36.5409L36.5409 38L25 26.4591L13.4591 38Z" fill="#E9DDCA"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <button class="btn" id="toggleButton"><span>Получить консультацию</span></button> <!--временная кнопка-->
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
