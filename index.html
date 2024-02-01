@@ -12,18 +12,21 @@
     <div class="modal-1 hidden">
       <div class="img-1"></div>
       <div class="form-and-close">
-        <div class="form-1">
+        <form class="form-1">
           <p class="title title-form-1">Будем рады ответить на ваши вопросы и помочь с выбором</p>
           <div class="inputs">
             <div class="input-name">
               <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
             </div>
             <div class="input-tel">
-              <input type="tel" id="phone" name="phone" pattern="\+\d{1,2} \d{3} \d{3} \d{2} \d{2}" placeholder="+7 999 414 64 14" required>
+              <input type="tel" id="phone" name="phone" pattern="\+\d{1} \d{3} \d{3} \d{2} \d{2}" placeholder="+7 999 414 64 14" required>
             </div>
           </div>
-          <button class="btn" id="toggleButton"><span>Получить консультацию</span></button>
-        </div>
+          <div class="input-submit">
+            <input type="submit" value="Получить консультацию" class="btn" id="toggleButton"></input>
+            <p class="submt-description">Нажимая на кнопку вы соглашаетесь на <span>обработку персональных данных</span></p>
+          </div>
+        </form>
         <div id="closeButton">
           <svg class="close-default" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
             <path d="M13.4591 38L12 36.5409L23.5409 25L12 13.4591L13.4591 12L25 23.5409L36.5409 12L38 13.4591L26.4591 25L38 36.5409L36.5409 38L25 26.4591L13.4591 38Z" fill="#474747"/>
@@ -41,7 +44,7 @@
         <div class="form-2">
           <p class="title title-form-2">Ваша заявка принята!</p>
           <p class="description">Мы свяжемся с вами в течение 5 минут.</p>
-          <button class="btn return-btn"><span>Вернуться на сайт</span></button>
+          <button class="btn" id="returnButton"><span>Вернуться на сайт</span></button>
         </div>
         <div id="closeButton2">
           <svg class="close-default" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
