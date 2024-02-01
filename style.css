@@ -14,7 +14,6 @@
 
 .open {
   background-color: rgba(0, 0, 0, 0.6);
-
 }
 
 .modal-1,
@@ -101,7 +100,7 @@
   height: 122px;
 }
 
-.submt-description {
+.submit-description {
   color: #c3c2bf;
   font-family: Helvetica;
   font-size: 16px;
@@ -214,4 +213,57 @@ input[type="tel"]:focus {
 /* класс для смены модального окна */
 .hidden {
   display: none;
+}
+
+
+@media screen and (max-width: 1800px) {
+
+  .open {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .form-and-close,
+  .modal-1,
+  .modal-2,
+  .form-1,
+  .form-2 {
+    width: 400px;
+    height: 100%;
+  }
+
+  .form-and-close {
+    padding: 20px;
+  }
+
+  .modal-1,
+  .form-1 {
+    height: 372px;
+  }
+
+  .modal-2,
+  .form-2 {
+    height: 194px;
+  }
+
+  .img-1,
+  .img-2 {
+    display: none;
+  }
+
+  .inputs,
+  .input-name, 
+  .input-tel,
+  input[type="text"],
+  input[type="tel"] {
+    width: 360px;
+  }
+
+  .inputs {
+    height: 130px;
+  }
+
+  .btn {
+    width: 360px;
+  }
+
 }
