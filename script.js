@@ -40,9 +40,6 @@ function init() {
       inputNumber.value = '';
   }
 
-  // function isClickOutsideModal(e) {
-  //   const withinBoundaries = 
-  // }
   
   function formatPhoneNumber() {
     let inputValue = this.value.replace(/\D/g, '');
@@ -79,11 +76,8 @@ function init() {
   wrapper.addEventListener('click', (e) => {
     const composedPath = e.composedPath();
     const checkingArr = [openModalButton, modal1, modal2];
-    // console.log(composedPath.includes(openModalButton));
 
     if (!checkingArr.some((value) => composedPath.includes(value))) {
-      // console.log('Ок');
-      // debugger;
       closeModal();
     } 
   });
@@ -92,4 +86,3 @@ function init() {
 };
 
 document.addEventListener("DOMContentLoaded", init);
-let test;
