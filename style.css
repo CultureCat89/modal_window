@@ -29,8 +29,7 @@
 
 
 /* Стили, примениемые к каждому из модальных окон */
-.modal-1,
-.modal-2 {
+.modal {
   position: absolute;
   display: flex;
   width: 1270px;
@@ -42,8 +41,7 @@
   background-color: #fff;
 }
 
-.img-1,
-.img-2 {
+.img {
   width: 661px;
   height: 581px;
 }
@@ -59,7 +57,7 @@
   position: relative;
   display: flex;
   width: 609px;
-  height: 581px;
+  height: 100%;
 }
 
 .form-1,
@@ -241,8 +239,7 @@ input[type="tel"]:focus {
     padding: 20px;
   }
 
-  .img-1,
-  .img-2 {
+  .img {
     display: none;
   }
 
