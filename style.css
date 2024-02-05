@@ -51,6 +51,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+
 }
 
 /* кнопка 'Получить консультацию' */
@@ -312,10 +313,6 @@ input:focus:invalid {
     height: 100%;
   }
 
-  .form-and-close {
-    padding: 20px;
-  }
-
   .img {
     display: none;
   }
@@ -336,10 +333,12 @@ input:focus:invalid {
   }
 
   .form-1 {
-    height: 332px;
+    height: 336px;
+    margin: 20px 20px 16px 20px;
   }
 
   .title-form-1 {
+    margin-top: 10px;
     height: 52px;
     font-size: 20px;
   }
@@ -358,7 +357,7 @@ input:focus:invalid {
 
   .input-submit {
     width: 360px;
-    height: 100px;
+    height: 104px;
   }
 
   .submit-description {
@@ -374,6 +373,7 @@ input:focus:invalid {
 
   .form-2 {
     height: 154px;
+    margin: 20px;
   }
 
   .title-form-2 {
