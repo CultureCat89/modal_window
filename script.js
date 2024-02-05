@@ -17,7 +17,6 @@ function init() {
   returnButton.addEventListener("click", closeModal);
 
   inputNumber.addEventListener("input", formatPhoneNumber);
-  // inputNumber.addEventListener("keydown", handleBackspace);
   toggleButton.addEventListener("click", validateForm);
   submitForm.addEventListener("submit", submitData);
 
@@ -49,14 +48,21 @@ function init() {
     inputNumber.value = "";
   }
 
-  function formatPhoneNumber() {
-    let inputValue = this.value.replace(/\D/g, "");
-    let formattedValue = `+7 ${inputValue.slice(1, 4)} ${inputValue.slice(
-      4,
-      7
-    )} ${inputValue.slice(7, 9)} ${inputValue.slice(9, 11)}`;
+  function formatPhoneNumber(e) {
+    if (e.inputType === "deleteContentBackward") return;
 
+    // cp - caretPosition
+    let cp = inputNumber.selectionStart;
+    let inputValue = this.value.replace(/\D/g, "");
+
+    let formattedValue = `+7 ${inputValue.slice(1, 4)} ${inputValue.slice(4, 7)} ${inputValue.slice(7, 9)} ${inputValue.slice(9, 11)}`;
     this.value = formattedValue.trim();
+    
+    if (this.value[cp - 1] === ' ' || cp === 1) {
+      inputNumber.setSelectionRange(cp + 1, cp + 1);
+    } else {
+      inputNumber.setSelectionRange(cp, cp);
+    }
   }
 
   function validateForm() {
@@ -65,13 +71,6 @@ function init() {
     toggleModals();
   }
 
-  // function handleBackspace(e) {
-  //   if (e.key === "Backspace") {
-  //     this.value = this.value.slice(0, -1);
-  //     e.preventDefault();
-  //   }
-  // }
-
   function submitData(e) {
     e.preventDefault();
   }
@@ -79,7 +78,7 @@ function init() {
   /* Реализаця закрытия по кнопке Esc */
   document.addEventListener("keydown", isEsc);
   function isEsc(e) {
-    if (e.code == "Escape") {
+    if (e.key == "Escape") {
       closeModal();
     }
   }
