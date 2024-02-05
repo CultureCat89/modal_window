@@ -70,7 +70,7 @@
 .modal {
   position: absolute;
   display: flex;
-  width: 1270px;
+  max-width: 1270px;
   height: 581px;
   top: 50%;
   left: 50%;
@@ -206,8 +206,7 @@ input:focus:invalid {
 }
 
 /* стили для 'крестика' */
-#closeButton,
-#closeButton2 {
+#closeButton {
   position: absolute;
   top: 0;
   right: 0;
@@ -216,13 +215,11 @@ input:focus:invalid {
   z-index: 10;
 }
 
-#closeButton:hover svg path,
-#closeButton2:hover svg path {
+#closeButton:hover svg path {
   fill: #e9ddca;
 }
 
 #closeButton:hover,
-#closeButton2:hover,
 .btn:hover {
   cursor: pointer;
 }
@@ -259,6 +256,45 @@ input:focus:invalid {
 /* класс для смены модального окна */
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 1500px) {
+  .img {
+    width: calc(100vw - 850px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .modal {
+    max-height: 90vw;
+  }
+
+  .form-and-close {
+    max-width: 90vw;
+  }
+
+  .form-1,
+  .form-2 {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .title {
+    font-size: 5.2vw;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .inputs,
+  .inputs * {
+    max-width: 80vw;
+  }
+
+  .title {
+    max-width: 75vw;
+  }
 }
 
 /* адаптивный дизайн под ширину 480px */
