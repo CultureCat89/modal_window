@@ -79,7 +79,7 @@ function init() {
   /* Реализаця закрытия по кнопке Esc */
   document.addEventListener("keydown", isEsc);
   function isEsc(e) {
-    if (e.keyCode == 27) {
+    if (e.code == "Escape") {
       closeModal();
     }
   }
