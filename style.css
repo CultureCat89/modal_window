@@ -1,8 +1,49 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('assets/fonts/CenturyGothic.eot');
+  src:
+    local('Century Gothic'),
+    url('assets/fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/CenturyGothic.woff2') format('woff2'),
+    url('assets/fonts/CenturyGothic.woff') format('woff'),
+    url('assets/fonts/CenturyGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('assets/fonts/Helvetica.eot');
+  src:
+    local('Helvetica'),
+    url('assets/fonts/Helvetica.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Helvetica.woff2') format('woff2'),
+    url('assets/fonts/Helvetica.woff') format('woff'),
+    url('assets/fonts/Helvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('assets/fonts/Raleway-Regular.eot');
+  src:
+    local('assets/fonts/Raleway'),
+    local('assets/fonts/Raleway-Regular'),
+    url('assets/fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Raleway-Regular.woff2') format('woff2'),
+    url('assets/fonts/Raleway-Regular.woff') format('woff'),
+    url('assets/fonts/Raleway-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Century Gothic";
+  font-family: 'Century Gothic';
   line-height: 130%;
 }
 
@@ -12,8 +53,7 @@
   height: 100vh;
 }
 
-
-/* кнопка "Получить консультацию" */
+/* кнопка 'Получить консультацию' */
 #openModal {
   position: absolute;
   top: 50%;
@@ -21,12 +61,10 @@
   transform: translate(-50%, -50%);
 }
 
-
-/* класс для отображения "темного" фона вокруг модального окна */
+/* класс для отображения 'темного' фона вокруг модального окна */
 .open {
   background-color: rgba(0, 0, 0, 0.6);
 }
-
 
 /* Стили, примениемые к каждому из модальных окон */
 .modal {
@@ -69,7 +107,6 @@
   margin: auto;
 }
 
-
 /* Форма для заполнения данных */
 .form-1 {
   height: 431px;
@@ -85,6 +122,11 @@
   height: 89px;
 }
 
+input {
+  all: unset;
+  box-sizing: border-box;
+}
+
 .inputs {
   display: flex;
   flex-direction: column;
@@ -93,7 +135,7 @@
   height: 140px;
 }
 
-.input-name, 
+.input-name,
 .input-tel {
   width: 453px;
   height: 60px;
@@ -120,8 +162,8 @@
   text-decoration: underline;
 }
 
-input[type="text"],
-input[type="tel"] {
+input[type='text'],
+input[type='tel'] {
   width: 453px;
   height: 60px;
   padding: 12px 20px 16px;
@@ -130,17 +172,21 @@ input[type="tel"] {
   font-size: 20px;
 }
 
-input[type="text"]::placeholder,
-input[type="tel"]::placeholder {
+input[type='text']::placeholder,
+input[type='tel']::placeholder {
   color: #c3c2bf;
 }
 
-input[type="text"]:focus,
-input[type="tel"]:focus {
+input[type='text']:focus,
+input[type='tel']:focus {
   border-color: #232323;
   box-shadow: 0;
 }
 
+input:focus:invalid {
+  border-color: red;
+  box-shadow: none;
+}
 
 /* Форма с подтверждением принятой заявки */
 .form-2 {
@@ -159,8 +205,7 @@ input[type="tel"]:focus {
   line-height: 130%;
 }
 
-
-/* стили для "крестика" */
+/* стили для 'крестика' */
 #closeButton,
 #closeButton2 {
   position: absolute;
@@ -173,7 +218,7 @@ input[type="tel"]:focus {
 
 #closeButton:hover svg path,
 #closeButton2:hover svg path {
-  fill: #E9DDCA;
+  fill: #e9ddca;
 }
 
 #closeButton:hover,
@@ -181,7 +226,6 @@ input[type="tel"]:focus {
 .btn:hover {
   cursor: pointer;
 }
-
 
 /* общие стили для кнопок */
 .btn {
@@ -206,8 +250,7 @@ input[type="tel"]:focus {
   background-color: #fff;
 }
 
-
-/* кнопка "Вернуться на сайт" */
+/* кнопка 'Вернуться на сайт' */
 #returnButton {
   width: 245px;
   height: 60px;
@@ -218,10 +261,8 @@ input[type="tel"]:focus {
   display: none;
 }
 
-
 /* адаптивный дизайн под ширину 480px */
 @media screen and (max-width: 500px) {
-
   .open {
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -252,7 +293,6 @@ input[type="tel"]:focus {
     height: 38px;
   }
 
-
   /* modal 1 */
 
   .modal-1 {
@@ -269,10 +309,10 @@ input[type="tel"]:focus {
   }
 
   .inputs,
-  .input-name, 
+  .input-name,
   .input-tel,
-  input[type="text"],
-  input[type="tel"] {
+  input[type='text'],
+  input[type='tel'] {
     width: 360px;
   }
 
@@ -290,8 +330,6 @@ input[type="tel"]:focus {
     height: 34px;
   }
 
-
-
   /* modal 2 */
 
   .modal-2 {
@@ -301,7 +339,7 @@ input[type="tel"]:focus {
   .form-2 {
     height: 154px;
   }
-  
+
   .title-form-2 {
     height: 31px;
     font-size: 24px;

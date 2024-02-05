@@ -17,7 +17,7 @@ function init() {
   returnButton.addEventListener("click", closeModal);
 
   inputNumber.addEventListener("input", formatPhoneNumber);
-  inputNumber.addEventListener("keydown", handleBackspace);
+  // inputNumber.addEventListener("keydown", handleBackspace);
   toggleButton.addEventListener("click", validateForm);
   submitForm.addEventListener("submit", submitData);
 
@@ -56,7 +56,7 @@ function init() {
       7
     )} ${inputValue.slice(7, 9)} ${inputValue.slice(9, 11)}`;
 
-    this.value = formattedValue;
+    this.value = formattedValue.trim();
   }
 
   function validateForm() {
@@ -65,12 +65,12 @@ function init() {
     toggleModals();
   }
 
-  function handleBackspace(e) {
-    if (e.key === "Backspace") {
-      this.value = this.value.slice(0, -1);
-      e.preventDefault();
-    }
-  }
+  // function handleBackspace(e) {
+  //   if (e.key === "Backspace") {
+  //     this.value = this.value.slice(0, -1);
+  //     e.preventDefault();
+  //   }
+  // }
 
   function submitData(e) {
     e.preventDefault();

@@ -19,11 +19,13 @@
               <input type="text" id="name" name="name" maxlength="50" placeholder="Как к вам обращаться?" required>
             </div>
             <div class="input-tel">
-              <input type="tel" id="phone" name="phone" pattern="\+\d{1} \d{3} \d{3} \d{2} \d{2}" placeholder="+7 999 414 64 14" required>
+              <input type="tel" id="phone" name="phone" pattern="\+\d{1}\s\d{3}\s\d{3}\s\d{2}\s\d{2}" placeholder="+7 999 414 64 14" required>
             </div>
           </div>
           <div class="input-submit">
-            <input type="submit" value="Получить консультацию" class="btn" id="toggleButton"></input>
+            <button class="btn">
+              <input type="submit" value="Получить консультацию"  id="toggleButton"></input>
+            </button>
             <p class="submit-description">Нажимая на кнопку вы соглашаетесь на <span>обработку персональных данных</span></p>
           </div>
         </form>
